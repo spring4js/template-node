@@ -1,6 +1,6 @@
 {
   "name": "@spring4js/template-node",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {
     "build": "rimraf ./lib && tsc",
