@@ -8,3 +8,4 @@ es
 yarn-error.log
 /coverage/
 /lib
+/logs

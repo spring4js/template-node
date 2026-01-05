@@ -1,18 +1,55 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "ES2020",
     "module": "commonjs",
-    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "types": [
+      "node"
+    ],
+    "sourceMap": false,
     "removeComments": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
     "experimentalDecorators": true,
-    "outDir": "./lib",
-    "declaration": true,
-    "importHelpers":true
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./src",
+    "paths": {
+      "di/*": [
+        "./lib/di/*"
+      ],
+      "middleware/*": [
+        "./middleware/*"
+      ],
+      "service/*": [
+        "./service/*"
+      ],
+      "utils/*": [
+        "./utils/*"
+      ],
+      "config/*": [
+        "./config/*"
+      ]
+    },
+   "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
+
   },
-  "include": ["src/**/*"],
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Recommended"
+  "include": [
+    "src/**/*.ts"
+  ],
+  // 包含的文件
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
 }
