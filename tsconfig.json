@@ -21,9 +21,6 @@
     "emitDecoratorMetadata": true,
     "baseUrl": "./src",
     "paths": {
-      "di/*": [
-        "./lib/di/*"
-      ],
       "middleware/*": [
         "./middleware/*"
       ],
