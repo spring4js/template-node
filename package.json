@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "ts-patch install -s",
     "dev": "ts-node -r tsconfig-paths/register src/main.ts",
-    "build": "rimraf ./dist && ts-patch check && tsc",
+    "build": "rimraf ./dist && ts-patch check && tsc -b",
     "start": "node dist/main.js"
   },
   "license": "MIT",
